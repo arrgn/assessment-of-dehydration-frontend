@@ -1,0 +1,169 @@
+.sign-card {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  overflow: hidden;
+  background: #1a1a1a;
+}
+
+.sign-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.sign-bottom {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  z-index: 2;
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+}
+
+.sign-info {
+  flex: 1;
+  background: rgba(217, 217, 217, 0.92);
+  border-radius: 14px;
+  padding: 12px 14px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.sign-info h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 4px;
+  color: #1a1a1a;
+}
+
+.sign-info p {
+  font-size: 12px;
+  color: #333;
+  line-height: 1.3;
+  margin: 0 0 8px;
+}
+
+.sign-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 44px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+/* Плашки выступают над колонкой кнопок */
+.sign-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  margin-bottom: 8px;
+}
+
+.tag {
+  background: #9e9e9e;
+  color: #1a1a1a;
+  font-size: 11px;
+  border-radius: 10px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px 0;
+  line-height: 1.2;
+}
+
+.sign-actions .icon-btn {
+  width: 44px;
+  padding: 0;
+  background: #d9d9d9;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition:
+    background 0.2s,
+    transform 0.15s;
+  line-height: 0;
+  box-sizing: border-box;
+}
+
+.sign-actions .icon-btn.heart {
+  flex: 0 0 auto;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.sign-actions .icon-btn.arrow {
+  flex: 1 1 auto;
+  min-height: 44px;
+  border-radius: 22px;
+}
+
+.sign-actions .icon-btn:hover,
+.sign-actions .icon-btn:focus-visible,
+.sign-actions .icon-btn:active {
+  background: #cfcfcf;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.sign-actions .icon-btn:active {
+  transform: scale(0.96);
+}
+
+/* Неактивная кнопка (лайк для гостя) */
+.sign-actions .icon-btn:disabled {
+  background: #d9d9d9;
+  opacity: 0.6;
+  pointer-events: auto;
+  cursor: not-allowed;
+}
+
+.sign-actions .icon-btn:disabled:active {
+  transform: none;
+}
+
+.sign-actions .icon-btn svg {
+  display: block;
+  width: 22px;
+  height: 22px;
+  margin: 0 auto;
+  flex-shrink: 0;
+}
+
+.sign-actions .icon-btn.heart svg {
+  fill: none;
+  stroke: #1ca7d2;
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+
+.sign-actions .icon-btn.heart.liked svg {
+  fill: #1ca7d2;
+}
+
+.sign-actions .icon-btn.arrow svg {
+  stroke: #1ca7d2;
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.feed-loader {
+  align-items: center;
+  justify-content: center;
+  color: #1ca7d2;
+}

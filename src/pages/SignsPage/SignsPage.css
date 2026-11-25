@@ -1,0 +1,24 @@
+/* Сетка карточек в две колонки */
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  flex-shrink: 0;
+  padding-bottom: 12px;
+}
+
+.cards-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #6b6b6b;
+  font-size: 14px;
+  padding: 30px 0;
+  margin: 0;
+}
+
+.cards-loader {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+  color: #1ca7d2;
+}
